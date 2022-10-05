@@ -1,0 +1,38 @@
+---
+title: "¿Cómo puede hacer una empresa tecnología para el bienestar para tomar decisiones inteligentes?"
+output:
+  html_document:
+    df_print: paged
+---
+Este caso práctico consiste en un análisis de datos Bellabeat, una empresa enfocada a productos de alta tecnología orientados a la salud de la mujer. 
+En las siguientes secciones se lleva a cabo la metodología propuesta por Google para análisis de datos: pregutar, preparar...
+
+1. Resumen de la tarea empresarial
+ 
+ Bellabeat esta orientada en desarrollar productos de alta tecnología para el bienestar de la mujeres, por esa razón Bellabeat cuenta con dispositivos que monitorean las actividades y la salud de las mujeres.
+ Con la finalidad de mejorar el conocimiento de los habitos de las mujeres es necesario obtener información que de cuenta del uso de los dispositivos inteligentes en el día a día, para ello este análisis se basará en información pública que recopila la actividad fisica de Fibit. 
+ El objetivo empresarial consiste en análizar los habitos de los usuarios para encontrar oportunidades de negocio para Bellabeat.
+ 
+2. Descripción de la base de datos
+
+La base de datos "Datos de seguimiento de actividad física de Fitbit" fue tomada de Kaggle a través de Mobius. 
+
+Los datos fueron almacenados localmene, son totalmente confiables. La base de datso se encuentra compuesta por un conjunto de 12 archivos que contienen informacion de las calorias consumidad, perdidas, horas de suelño etc. 
+
+3. Procesar los datos
+
+Cargar los datos
+
+```{r}
+library(readr)
+datos <- read_csv("C:/Users/luism/OneDrive/Documentos/Cursos/Google Analist/Trabajo Final/Fitabase Data 4.12.16-5.12.16/dailyActivity_merged.csv", header = TRUE)
+str(datos)
+```
+
+Estadíastica descriptiva
+
+```{r}
+summary("TotalSteps")
+```
+
+
